@@ -4,9 +4,12 @@ import com.restics.socialmedia.model.User;
 import com.restics.socialmedia.service.UserService;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
-@Route("users")  // This view lives at localhost:8080/users
+// @Route("users")  // This view lives at localhost:8080/users
+@Route(value = "users", layout = MainLayout.class)
+@PageTitle("Users | SocialMedia")
 public class UserListView extends VerticalLayout {
 
     public UserListView(UserService userService) {

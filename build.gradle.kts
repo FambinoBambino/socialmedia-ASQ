@@ -9,9 +9,9 @@ buildscript {
 
 plugins {
     java
-    id("org.springframework.boot") version "4.0.5"
+    id("org.springframework.boot") version "3.3.0" // changed to version "3.3.0"
     id("io.spring.dependency-management") version "1.1.7"
-    id("com.vaadin")
+    id("com.vaadin") version "24.8.3" // Added 'version "24.8.3"'
 }
 
 group = "com.restics"
@@ -33,7 +33,7 @@ repositories {
 
 dependencyManagement {
     imports {
-        mavenBom("com.vaadin:vaadin-bom:${property("vaadinVersion")}")
+        mavenBom("com.vaadin:vaadin-bom:24.8.3") // replaced ${property("vaadinVersion") with "24.8.3"
     }
 }
 
